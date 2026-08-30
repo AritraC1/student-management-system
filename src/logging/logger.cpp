@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "logger.hpp"
 
 void Logger::log(LogLevel level, const std::string& message) {

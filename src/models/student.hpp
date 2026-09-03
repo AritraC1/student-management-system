@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -32,4 +34,16 @@ class StudentModel {
 
         // get student details
         void display_details() const;
+
+        // get id
+        std::string get_id() const;
+        
+        // get name
+        std::string get_name() const;
+
+        // get age
+        int get_age() const;
+
+        // get courses
+        std::vector<Course> get_courses() const;
 };

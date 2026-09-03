@@ -28,3 +28,19 @@ void StudentModel::set_courses(std::vector<Course> new_course){
 void StudentModel::display_details() const {
     std::cout << "ID: " << id << ", Name: " << name << ", Age: " << age << std::endl;
 }
+
+std::string StudentModel::get_id() const { 
+    return id; 
+}
+
+std::string StudentModel::get_name() const { 
+    return name;
+}
+
+int StudentModel::get_age() const { 
+    return age;
+}
+
+std::vector<Course> StudentModel::get_courses() const { 
+    return course; 
+}

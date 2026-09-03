@@ -39,9 +39,6 @@ void Logger::log(LogLevel level, const std::string& message) {
           << message << " | "
           << get_timestamp();
 
-    // Print to console.
-    std::cout << entry.str() << std::endl;
-
     if (log_file.is_open()) {
         // Write to file and flush immediately.
         log_file << entry.str() << std::endl;

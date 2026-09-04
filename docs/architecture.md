@@ -1,7 +1,7 @@
 # Architecture
 The Student Management System is a CLI-based application written in C++.
 
-The system will manage student information, attendance, marks, GPA, fees, and user roles. The project will be developed incrementally in phases.
+The system will manage student information. The project will be developed incrementally in phases.
 
 ## Architecture Style
 The application will follow a simple layered architecture.
@@ -31,10 +31,6 @@ Contains the application's business logic.
 
 **Responsibilities:**
 - Student management
-- Attendance calculations
-- GPA calculations
-- Fee management
-- Validation
 
 ### Repositories
 Handles data access.
@@ -53,10 +49,7 @@ Stores application data permanently.
 
 ```md
 data/
-├── students.txt
-├── attendance.txt
-├── marks.txt
-└── fees.txt
+└── students.txt
 ```
 
 ## Layer Rules

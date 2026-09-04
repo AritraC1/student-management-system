@@ -1,17 +1,10 @@
 # Project Requirement Document (PRD)
 
 ## Overview
-Student Management System is a CLI-based application built in C++ to manage student records and academic information.
+Student Management System is a CLI-based application built in C++ to manage student records.
 
 ## Goal
 The goal of the system is to provide a simple way to manage student information through a command-line interface.
-
-The project will be developed incrementally, with new features added in multiple phases.
-
-## Users
-- **Admin:** Can manage all student records and system data.
-- **Teacher:** Can manage attendance and marks.
-- **Student:** Can view their own information and academic records.
 
 ## Functional Requirements
 
@@ -35,30 +28,6 @@ The project will be developed incrementally, with new features added in multiple
 - Log important system events
 - Log errors and warnings
 
-### Phase 5 - Attendance
-- Mark attendance
-- View attendance history
-- Calculate attendance percentage
-
-### Phase 6 - Marks
-- Add marks
-- Update marks
-- View marks
-
-### Phase 7 - GPA
-- Calculate GPA
-- Generate student result summary
-
-### Phase 8 - Fees
-- Record fee payments
-- View fee status
-- Track pending fees
-
-### Phase 9 - Roles
-- Admin role
-- Teacher role
-- Student role
-
 ## Non-Functional Requirements
 - CLI-based application
 - Written in modern C++
@@ -73,21 +42,6 @@ The project will be developed incrementally, with new features added in multiple
 - Name
 - Age
 - Course
-
-### Attendance Record
-- Student ID
-- Date
-- Status
-
-### Marks
-- Student ID
-- Subject
-- Marks Obtained
-
-### Fee Record
-- Student ID
-- Amount
-- Payment Status
 
 ## Future Enhancements
 - SQLite integration

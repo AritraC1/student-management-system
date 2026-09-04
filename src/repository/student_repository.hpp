@@ -13,18 +13,25 @@ class StudentRepository {
     Storage<StudentModel> storage;
 
     public:
-        // add student
+        explicit StudentRepository(std::string filepath = "data/students.txt") : storage(filepath) {
+            storage.load_from_file();
+            Logger::log(LogLevel::INFO, "Repository: loaded students from " + filepath);
+        }
+
         void add(StudentModel s) {
             storage.add(s);
+            storage.save_to_file();
+            
             Logger::log(LogLevel::INFO, "Repository: student added, id=" + s.get_id());
         }
 
-        // Update student details
         bool update(StudentModel s) {
             bool success = storage.update(
                 [&](const StudentModel& existing) { return existing.get_id() == s.get_id(); },
                 s
             );
+
+            if (success) storage.save_to_file();
 
             Logger::log(
                 success ? LogLevel::INFO : LogLevel::WARNING,
@@ -34,11 +41,12 @@ class StudentRepository {
             return success;
         }
 
-        // Delete student from storage
         bool remove(std::string id) {
             bool success = storage.remove(
                 [&](const StudentModel& existing) { return existing.get_id() == id; }
             );
+
+            if (success) storage.save_to_file();
 
             Logger::log(
                 success ? LogLevel::INFO : LogLevel::WARNING,
@@ -48,7 +56,6 @@ class StudentRepository {
             return success;
         }
 
-        // Get one student from storage by id
         std::optional<StudentModel> find_by_id(std::string id) {
             auto result = storage.find(
                 [&](const StudentModel& existing) { return existing.get_id() == id; }
@@ -61,7 +68,6 @@ class StudentRepository {
             return result;
         }
 
-        // get all students
         std::vector<StudentModel> get_all_students() {
             return storage.get_all();
         }

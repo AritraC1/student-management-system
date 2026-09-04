@@ -46,4 +46,8 @@ class StudentModel {
 
         // get courses
         std::vector<Course> get_courses() const;
+
+        // add to public section
+        std::string serialize() const;
+        static StudentModel deserialize(const std::string &line);
 };

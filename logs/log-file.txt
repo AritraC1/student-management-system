@@ -2,3 +2,13 @@
 2 | INFO | Repository: student added, id=16807 | 2026-09-03 21:02:48
 3 | INFO | Repository: student added, id=282475249 | 2026-09-03 21:03:15
 4 | INFO | Repository: student removed, id=16807 | 2026-09-03 21:03:40
+1 | INFO | Application started | 2026-09-04 20:17:13
+2 | INFO | Repository: loaded students from ../data/students.txt | 2026-09-04 20:17:13
+3 | INFO | Repository: student added, id=16807 | 2026-09-04 20:17:28
+1 | INFO | Application started | 2026-09-04 20:22:34
+2 | INFO | Repository: loaded students from ../data/students.txt | 2026-09-04 20:22:34
+1 | INFO | Application started | 2026-09-04 20:23:57
+2 | INFO | Repository: loaded students from data/students.txt | 2026-09-04 20:23:57
+3 | INFO | Repository: student added, id=16807 | 2026-09-04 20:24:21
+4 | INFO | Repository: student added, id=282475249 | 2026-09-04 20:24:44
+5 | INFO | Repository: student removed, id=282475249 | 2026-09-04 20:25:16
